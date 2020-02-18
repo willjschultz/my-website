@@ -1,0 +1,72 @@
+.App {
+  background: #d0e4e6;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding-top: 5%;
+  padding-bottom: 25%;
+  padding-right: 0px;
+  color: white;
+}
+
+.App-logo {
+  padding-left: 70%;
+  height: 80px;
+}
+
+.App-title {
+  padding-left: 10%;
+  font-size: 6em;
+}
+
+.App-subtitle {
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 10%;
+}
+
+.Body {
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 4em;
+}
+
+.Menu-box-closed {
+  width: 10em;
+  height: 10em;
+  color:black;
+  border-width: 0px;
+  margin: 0px 15px;
+
+  border-radius: 48px;
+  background: #d0e4e6;
+  box-shadow:  8px 8px 16px #535b5c, 
+               -8px -8px 16px #ffffff;
+}
+
+.Menu-box-open {
+  width: 10em;
+  height: 10em;
+  color:white;
+  border-width: 0px;
+  margin: 0px 15px;
+  
+  border-radius: 48px;
+  background: #356064;
+  box-shadow: inset 8px 8px 16px #152628, 
+              inset -8px -8px 16px #559aa0;
+}
+
+.Test {
+  font-size: 1.25em;
+  color: black;
+  background-color: #ECEDF1;
+  box-shadow: -10px -10px 10px 20px white;
+  box-shadow: 5px 5px 5px #A6ABBD;
+  width: 20%;
+  height: 2em;
+
+}
+
