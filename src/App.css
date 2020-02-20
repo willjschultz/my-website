@@ -35,7 +35,7 @@
 
 .Menu-box-closed {
   width: 10em;
-  height: 10em;
+  height: 5em;
   color:black;
   border-width: 0px;
   margin: 0px 15px;
@@ -48,7 +48,7 @@
 
 .Menu-box-open {
   width: 10em;
-  height: 10em;
+  height: 5em;
   color:white;
   border-width: 0px;
   margin: 0px 15px;
@@ -57,6 +57,14 @@
   background: #356064;
   box-shadow: inset 8px 8px 16px #152628, 
               inset -8px -8px 16px #559aa0;
+}
+
+.Displayed {
+  display: block;
+}
+
+.NotDisplayed {
+  display: none;
 }
 
 .Test {
@@ -70,3 +78,19 @@
 
 }
 
+#Content {
+  text-align: left;
+  padding-top: 2em;
+  padding-left: 2%;
+  margin-top:2em;
+  margin-left: 10%;
+  margin-right:10%;
+  width: initial;
+  max-width: initial;
+  height: 40em;
+  overflowY: 'scroll';
+  border-radius: 48px;
+  background: #ffffff;
+  box-shadow: inset 8px 8px 16px #666666, 
+              inset -8px -8px 16px #ffffff;
+}
