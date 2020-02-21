@@ -3,12 +3,10 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding-top: 5%;
-  padding-bottom: 25%;
-  padding-right: 0px;
-  color: white;
+  border-radius: 48px;
+  background: linear-gradient(145deg, #323232, #3b3b3b);
+  box-shadow:  8px 8px 16px #161616, 
+               -8px -8px 16px #585858;
 }
 
 .App-logo {
@@ -86,7 +84,7 @@
   margin-left: 10%;
   margin-right:10%;
   width: initial;
-  max-width: initial;
+  max-width: initial; 
   height: 40em;
   overflowY: 'scroll';
   border-radius: 48px;

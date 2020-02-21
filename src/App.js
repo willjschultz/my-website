@@ -10,14 +10,14 @@ class App extends Component {
                 contactOpen: false,
                 projectsOpen: false,
                 booksOpen: false,
-                resumeOpen: false,
+                experienceOpen: false,
                 };
 
   this.aboutToggle = this.aboutToggle.bind(this);
   this.contactToggle = this.contactToggle.bind(this);
   this.projectsToggle = this.projectsToggle.bind(this);
   this.booksToggle = this.booksToggle.bind(this);
-  this.resumeToggle = this.resumeToggle.bind(this);
+  this.experienceToggle = this.experienceToggle.bind(this);
   }
 
   aboutToggle(props) {
@@ -27,7 +27,7 @@ class App extends Component {
       contactOpen: false,
       projectsOpen: false,
       booksOpen: false,
-      resumeOpen: false,
+      experienceOpen: false,
     }))} else {
       this.setState(state => ({
         aboutOpen: true
@@ -42,7 +42,7 @@ class App extends Component {
         contactOpen: true,
         projectsOpen: false,
         booksOpen: false,
-        resumeOpen: false,
+        experienceOpen: false,
       }))} else{
         this.setState(state => ({
           contactsOpen: true
@@ -56,7 +56,7 @@ class App extends Component {
         contactOpen: false,
         projectsOpen: true,
         booksOpen: false,
-        resumeOpen: false,
+        experienceOpen: false,
       }))} else{
         this.setState(state => ({
           projectsOpen: true
@@ -70,24 +70,24 @@ class App extends Component {
         contactOpen: false,
         projectsOpen: false,
         booksOpen: true,
-        resumeOpen: false,
+        experienceOpen: false,
       }))} else{
         this.setState(state => ({
           booksOpen: true
         }))};
   }
 
-  resumeToggle(props) {
-    if(this.state.resumeOpen === false){
+  experienceToggle(props) {
+    if(this.state.experienceOpen === false){
       this.setState(state => ({
         aboutOpen: false,
         contactOpen: false,
         projectsOpen: false,
         booksOpen: false,
-        resumeOpen: true,
+        experienceOpen: true,
       }))} else{
         this.setState(state => ({
-          resumeOpen: true
+          experienceOpen: true
         }))};
   }
 
@@ -106,12 +106,12 @@ class App extends Component {
           <button className={ !this.state.aboutOpen ? "Menu-box-closed" : "Menu-box-open"} onClick={this.aboutToggle}>About Me</button>
           <button className={ !this.state.projectsOpen ? "Menu-box-closed" : "Menu-box-open"} onClick={this.projectsToggle}>Technical Projects</button>
           <button className={ !this.state.booksOpen ? "Menu-box-closed" : "Menu-box-open"} onClick={this.booksToggle}>Books Read 2020</button>
-          <button className={ !this.state.resumeOpen ? "Menu-box-closed" : "Menu-box-open"} onClick={this.resumeToggle}>Resume</button>
+          <button className={ !this.state.experienceOpen ? "Menu-box-closed" : "Menu-box-open"} onClick={this.experienceToggle}>Experience</button>
           <button className={ !this.state.contactOpen ? "Menu-box-closed" : "Menu-box-open"} onClick={this.contactToggle}>Contact Me</button>
 
           <br/><br/><br/>
           <div id="Content">
-            <div className={ !this.state.aboutOpen ? "NotDisplayed" : "Displayed"}> 
+            <div className={ this.state.aboutOpen ? "Displayed": "NotDisplayed"}> 
               <p>
                 My name is Will Schultz. I am a husband, father, space enthusiast, pizza enthusiast, and coding enthusiast.
               </p>
@@ -125,7 +125,28 @@ class App extends Component {
               </p>
             </div>
 
-            <div className={ !this.state.booksOpen ? "NotDisplayed" : "Displayed"}>
+            <div className={ this.state.projectsOpen ? "Displayed": "NotDisplayed"}>
+              <h4>T-NATION CLI GEM</h4>
+                GITHUB.COM/WJSCHULTZ/TNATION-CLI
+                <ul>
+                  <li>Designed a command line application using Ruby</li>
+                  <li>Adhered to object oriented paradigm by creating multiple object models</li>
+                  <li>Separated concerns to adhere to the singleresponsibility principle</li>
+                  <li>Utilized Nokogiri to scrape dynamic information</li>
+                </ul>
+
+              <h4>REAL ESTATE MOGUL HUB</h4>
+                GITHUB.COM/WJSCHULTZ/REM-HUB
+                <ul>
+                  <li>Applied Sinatra to create routes between the controllers and the views</li>
+                  <li>Designed database schema and stored data using SQLite and ActiveRecord</li>
+                  <li>Added validations and flash error messages to prevent invalid data from being saved</li>
+                  <li>Leveraged Bcrypt to secure user passwords and authenticate logins</li>
+                </ul>
+      
+            </div>
+
+            <div className={ this.state.booksOpen ? "Displayed": "NotDisplayed"}>
               <p>
                 I've always enjoyed reading, however once I became a father and returned
                 to a technical education, I found that my reading severely fell off.
@@ -137,9 +158,45 @@ class App extends Component {
               </p>
 
               <ol>
-                <li>Poo</li>
-              </ol>
+                <li>The Fall of Carthage by Adrian Goldsworthy</li>
+                <li>50 Battles that Changed the World by William Weir</li>
+                <li>The End is Always Near by Dan Carlin</li>
+                <li>The Nonexistent Knight by Italo Calvino</li>
+                <li>How to be Better at (Almost) Everything by Pat Flynn</li>
+                <li>Dao DeJing by Laozi </li>
+               </ol>
 
+            </div>
+
+            <div className={ this.state.experienceOpen ? "Displayed": "NotDisplayed"}>
+              <h3>Work Experience</h3>
+              SMALL BUSINESS EXPERT [WIRELESS SOLUTIONS] | SPRINT | 2017 - PRESENT
+                <ul>
+                  <li>Spearheaded small business outreach in Thornton, Colorado market</li>
+                  <li>Established communications expert for sales and technical support</li>
+                  <li>Provided the total sales solution for all customers</li>
+                  <li>Consistently surpassed monthly business sales quotas</li>
+                  <li>Coached and trained peers to increase skills in sales</li>
+                </ul>
+
+              ASSISTANT MANAGER | AMERICAN LIBERTY GROUP | 2015-2017
+              <ul>
+                  <li>Excelled in one-call-close, cold-call sales</li>
+                  <li>Provided ongoing training for new and experienced salespeople</li>
+                  <li>Wrote new sales scripts and customized existing ones to maximize strengths</li>
+              </ul>
+
+              <br/>
+              <h3>Educational Experience</h3>
+              FULL-STACK WEB DEVELOPMENT [RUBY/REACT] | FLATIRON SCHOOL | 2019
+              <br/><br/>
+              BUSINESS ADMINISTRATION [MARKETING] | THOMAS EDISON STATE COLLEGE | 2014
+              </div>
+                      
+            <div className={ this.state.contactOpen ? "Displayed": "NotDisplayed"}>
+              <h5>LinkedIn</h5>
+              <h5>Github</h5>
+              <h5>Email</h5>
             </div>
           </div>
         </body>
